@@ -68,11 +68,11 @@ function strokeColor(){
 	//Cut = Red
 	var spotCut = "255,0,0";
 
-	//Engrave =  Blue
-	var spotEngrave = "0,0,255";
+	//Score =  Blue
+	var spotScore = "0,0,255";
 
-	//Score = Black
-	var spotScore = "0,0,0";
+	//Engrave = Black
+	var spotEngrave = "0,0,0";
 
 	//count the number of paths for each colour
 	var spotCutCount = 0;
@@ -116,7 +116,7 @@ function strokeColor(){
 		infoMessage += "\n[I] Paths to Score:" + spotScoreCount + "\n";
 	}
 	if(invaildColorCount >= 1) {
-		infoMessage += "\n[!] Waring: Paths Missing Swatch Colours:" + invaildColorCount + "\n";
+		infoMessage += "\n[!] Warning: Paths Missing Swatch Colours:" + invaildColorCount + "\n";
 	}
 }
 
