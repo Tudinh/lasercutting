@@ -31,13 +31,13 @@ This script has been prepared to help sense check your document before you laser
 
 Head to: `/Applications/Adobe Illustrator CC 2019/Presets/en_GB/Scripts`.
 
-![Location of Script Path](/images/ScriptPath_v01.png)
+![Location of Script Path](/images/ScreenCapture-ScriptPath_v01.png)
 
-Place the script found in `scripts\preflight.jsx`, in the folder above.
+Make sure Adobe Illustrator is closed, then place the script found in `scripts\preflight.jsx`, in the folder above.
 
-You'll then be able to run the script on your opened document, by going to:
+Then open Adobe Illustrator, you'll then be able to run the script on your opened document, by going to:
 
-[Screen Shot 2019-02-04 at 15.03.18]
+![Location of Script Path](/images/ScreenCapture-Preflight_v01.png)
 
 The script will then run through various checks such as checking if:
 
@@ -56,7 +56,11 @@ Please check the warnings and correct before trying to lasercut. If you get a `f
 
 Here is an example of what you can expect if a file has passed:
 
+![Stroke](/images/ScreenCapture-Preflight-Pass_v01.png)
+
 Here is an example if a file fails:
+
+![Stroke](/images/ScreenCapture-Preflight-Fail_v01.png)
 
 ## Useful Links
 - [10 Tips and Tricks for Laser Engraving and Cutting](https://www.instructables.com/id/10-Tips-and-Tricks-for-Laser-Engraving-and-Cutting/)
