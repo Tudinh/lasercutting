@@ -29,7 +29,11 @@ Please use this template for the class activity and not the IoM template, howeve
 ## Pre-flight Script
 This script has been prepared to help sense check your document before you laser cut. To run the script, you need to do the following:
 
-Head to: `/Applications/Adobe Illustrator CC 2019/Presets/en_GB/Scripts`.
+On Mac OS head to: `/Applications/Adobe Illustrator CC 2019/Presets/en_GB/Scripts`.
+
+On Windows go to: `C:\Program Files\Adobe\Adobe Illustrator CC 2019\Presets\en_GB\Scripts`.
+
+Note: You might need to replace `en_GB` with your language version and `2019` with your version of Illustrator CC. 
 
 ![Location of Script Path](/images/ScreenCapture-ScriptPath_v01.png)
 
