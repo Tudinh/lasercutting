@@ -2,8 +2,9 @@
 var preflightDoc = app.activeDocument;
 
 // We are using mm
-var mm = 2.8346455656; 
+var mm = 2.8346455656;
 var strokeWidthAmount = (0.001 * mm);
+var strokeWidthRounded = strokeWidthAmount.toFixed(6);
 
 //Messages
 var infoMessage = "";
@@ -41,17 +42,22 @@ function strokeTest(){
 
 		var allPaths = preflightDoc.pathItems;
 		var inCorrectPaths = 0;
+		var correctPaths = 0;
 		
 		for (var l=0; l < allPaths.length; l++) {  
 			// TODO: Need to improve so it checks what is less than this amount, but having an issue doing this
-			if(allPaths[l].strokeWidth >= strokeWidthAmount){
+			if(allPaths[l].strokeWidth.toFixed(6) > strokeWidthRounded){
 				inCorrectPaths += 1;
+			} else {
+				correctPaths += 1;
 			}
 		}
 
 		if(inCorrectPaths >= 1) {
 			infoMessage += "\n✕ FAILED: Please check all your paths have a stroke of 0.001mm. You have the following paths which are incorrect:" + inCorrectPaths + "\n";
-		} else {
+		}
+
+		if(correctPaths >= 1) {
 			infoMessage += "\n✔ PASS: Stroke width for paths are 0.001mm\n";
 		}
 }
