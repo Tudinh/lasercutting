@@ -20,6 +20,7 @@ function PreFlightTests() {
 	// Tests
 	rgbMode();
 	strokeTest();
+	strokeOpacity();
 	strokeColor();
 
 	//Display Info
@@ -60,6 +61,23 @@ function strokeTest(){
 		if(correctPaths >= 1) {
 			infoMessage += "\n✔ PASS: Stroke width for paths are 0.001mm\n";
 		}
+}
+
+function strokeOpacity(){
+	var allPaths = preflightDoc.pathItems; 
+	
+	var invaildOpacityCount = 0;
+	
+	for (var l=0; l < allPaths.length; l++) {
+		if (allPaths[l].opacity < 100) { 
+			//FAIL, opacity is less that 100%.
+			invaildOpacityCount += 1;
+		}
+	}
+	
+	if(invaildOpacityCount > 0){
+		infoMessage += "\n❗ WARNING:	Transparency detected in " + invaildOpacityCount + " paths\n";
+	}
 }
 
 function strokeColor(){
@@ -106,17 +124,18 @@ function strokeColor(){
 	}
 
 	if(spotCutCount >= 1) {
-		infoMessage += "\n[I] Paths to Cut:" + spotCutCount + "\n";
+		infoMessage += "\nℹ️ Paths to Cut:" + spotCutCount + "\n";
 	}
 	if(spotEngraveCount >= 1) {
-		infoMessage += "\n[I] Paths to Engrave:" + spotEngraveCount + "\n";
+		infoMessage += "\nℹ️ Paths to Engrave:" + spotEngraveCount + "\n";
 		infoMessage += "Consider using Scoring instead of Engraving to speed up the process of laser cutting.\n";
 	}
 	if(spotScoreCount >= 1) {
-		infoMessage += "\n[I] Paths to Score:" + spotScoreCount + "\n";
+		infoMessage += "\nℹ️ Paths to Score:" + spotScoreCount + "\n";
 	}
 	if(invaildColorCount >= 1) {
-		infoMessage += "\n[!] Warning: Paths Missing Swatch Colours:" + invaildColorCount + "\n";
+		infoMessage += "\n❗ WARNING:	Paths with non-existent swatch colour: " + invaildColorCount + "\n";
+		infoMessage += "		You might want to use only swatch colours!";
 	}
 }
 
