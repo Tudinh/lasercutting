@@ -22,7 +22,7 @@ Template: `templates/PCP-LaserCuttingTemplate.ai`
 This is the template you should use for the class laser cutting activity for PCP. The difference between this template and the IoM template are as follows:
 
 - It is 150mm by 100mm, compared to the 610mm by 457mm for the laser cutter at the IoM.
-- We are only including the `Cut` (red) and `Score` swatchs within this template, please do not try to use `Engrave`.
+- We are only including the `Cut` (red) and `Score` swatches within this template, please do not try to use `Engrave`.
 
 Please use this template for the class activity and not the IoM template, however when you are undertaking your projects outside of class, please use the general template.
 
@@ -48,10 +48,10 @@ The script will then run through various checks such as checking if:
 - the document is set to RGB
 - the stroke widths for paths are 0.001mm
 - the stroke colour is either cut, engrave, score and using the swatches that are defined in the template
+- the opacity of the stroke on paths are set to 100%
 
 Here are things that we don't currently check for but we may improve the script to do in the future (but would suggest you check manually at least):
 
-- Ensure that the opacity of the stroke on paths are 100%
 - The page size is correct
 - There should not be any bitmap images in the document
 - Fonts should be set to an outline
